@@ -1,6 +1,7 @@
 all: clear
 	mkdir bin
-	gcc -Wall cloudfs.c `pkg-config fuse3 --cflags --libs` -o bin/cloudfs
+	g++ --std=c++17 -Wall cloudfs.cpp `pkg-config fuse3 --cflags --libs` -lssl -lcrypto -o bin/cloudfs
+	mkdir bin/mnt
 install:
 	cp bin/cloudfs /usr/bin/cloudfs
 clear:

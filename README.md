@@ -1,12 +1,13 @@
 ## CloudFS
 
-###### FUSE module for mount many cloud drives (*drive.google*, *dropbox*, *onedrive*, *disk.yandex*, etc) in one disk space.
+###### FUSE module for mount many cloud drives (*google*, *dropbox*, *onedrive*, *yandex*, etc) as one disk space.
 ###### It can be used with same cloud drives.
 
 ### Dependencies:
 - fuse3
 - libfuse3
 - libfuse3-dev
+- libssl-dev
 
 ### Installation:
 ```sh
@@ -29,6 +30,9 @@ google:ACCESS_TOKEN_6
 cloudfs <MOUNT_POINT>
 ```
 
-### TODO:
+### Supported cloud drives:
+- yandex
 
+### TODO:
+- json parser
 - install as a service
